@@ -129,33 +129,33 @@
         <div class="sub">FY2026 assessment schedule at a glance</div>
       </div>
     </div>
-    <div class="header-right">As of <b>15 Sep 2026</b> &nbsp;|&nbsp; <b>750</b> assessments &nbsp;|&nbsp; <b>500</b> entities</div>
+    <div class="header-right">As of <b>15 Sep 2026</b> &nbsp;|&nbsp; <b>50</b> assessments &nbsp;|&nbsp; <b>12</b> entities</div>
   </div>
 
   <div class="kpi-row">
     <div class="kpi">
       <div class="kpi-label">Total Assessments</div>
-      <div class="kpi-value" style="color:var(--navy);">750</div>
+      <div class="kpi-value" style="color:var(--navy);">50</div>
       <div class="kpi-sub">FY2026</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Completed</div>
-      <div class="kpi-value" style="color:var(--green);">539</div>
-      <div class="kpi-sub">72% of total</div>
+      <div class="kpi-value" style="color:var(--green);">42</div>
+      <div class="kpi-sub">84% of total</div>
     </div>
     <div class="kpi emphasis">
       <div class="kpi-label">Currently Delayed</div>
-      <div class="kpi-value" style="color:var(--red);">29</div>
-      <div class="kpi-sub">3.9% — needs action</div>
+      <div class="kpi-value" style="color:var(--red);">3</div>
+      <div class="kpi-sub">6% — needs action</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">In Progress</div>
-      <div class="kpi-value" style="color:var(--blue);">14</div>
+      <div class="kpi-value" style="color:var(--blue);">3</div>
       <div class="kpi-sub">Currently running</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Upcoming</div>
-      <div class="kpi-value" style="color:var(--slate);">168</div>
+      <div class="kpi-value" style="color:var(--slate);">2</div>
       <div class="kpi-sub">Not yet started</div>
     </div>
   </div>
@@ -191,7 +191,7 @@
 
       <div class="panel">
         <div class="panel-title">4. Inspector Performance</div>
-        <div class="panel-sub">Top 10 by on-time completion rate</div>
+        <div class="panel-sub">All 4 inspectors, by on-time completion rate</div>
         <div class="insp-table-wrap">
           <table>
             <thead>
@@ -221,38 +221,32 @@
 
 <script>
 const STATUS_DATA = [
-  { label:"Completed (On Time)", value:348, color:"#3AA75B" },
-  { label:"Completed (Delayed)", value:191, color:"#E2A227" },
-  { label:"Planned",             value:168, color:"#AEB9C8" },
-  { label:"Delayed (Not Started)", value:18, color:"#A8291F" },
-  { label:"In Progress",         value:14,  color:"#2E6FDB" },
-  { label:"Delayed (In Progress)", value:11, color:"#D93A3A" },
+  { label:"Completed (On Time)", value:32, color:"#3AA75B" },
+  { label:"Completed (Delayed)", value:10, color:"#E2A227" },
+  { label:"In Progress",         value:3,  color:"#2E6FDB" },
+  { label:"Delayed (In Progress)", value:2, color:"#D93A3A" },
+  { label:"Planned",             value:2,  color:"#AEB9C8" },
+  { label:"Delayed (Not Started)", value:1, color:"#A8291F" },
 ];
 const TYPE_DATA = [
-  { label:"Offsite", value:550, color:"#0E8A7D" },
-  { label:"Onsite",  value:200, color:"#16305C" },
+  { label:"Offsite", value:38, color:"#0E8A7D" },
+  { label:"Onsite",  value:12, color:"#16305C" },
 ];
 
 const QUARTERS = ["Q1 2026","Q2 2026","Q3 2026","Q4 2026"];
 const STATUS_GROUP_COLORS = { Completed:"#3AA75B", Delayed:"#D93A3A", "In Progress":"#2E6FDB", Planned:"#AEB9C8" };
 const QUARTER_STACK = {
-  "Q1 2026": { Completed:201 },
-  "Q2 2026": { Completed:199 },
-  "Q3 2026": { Completed:139, Delayed:29, "In Progress":14, Planned:29 },
-  "Q4 2026": { Planned:139 },
+  "Q1 2026": { Completed:12 },
+  "Q2 2026": { Completed:20 },
+  "Q3 2026": { Completed:10, Delayed:3, "In Progress":3 },
+  "Q4 2026": { Planned:2 },
 };
 
 const INSPECTORS = [
-  { name:"Noor Al-Hazmi",        assigned:39, onTime:24, delayed:3, rate:82.8 },
-  { name:"Bandar Al-Sulami",     assigned:36, onTime:16, delayed:1, rate:80.0 },
-  { name:"Yousef Al-Harbi",      assigned:34, onTime:18, delayed:1, rate:75.0 },
-  { name:"Faisal Al-Ghamdi",     assigned:35, onTime:20, delayed:3, rate:74.1 },
-  { name:"Mariam Al-Dosari",     assigned:39, onTime:20, delayed:2, rate:71.4 },
-  { name:"Sultan Al-Harthi",     assigned:39, onTime:24, delayed:1, rate:70.6 },
-  { name:"Mohammed Al-Juhani",   assigned:44, onTime:25, delayed:2, rate:69.4 },
-  { name:"Dana Al-Subaie",       assigned:38, onTime:16, delayed:3, rate:66.7 },
-  { name:"Sara Al-Yami",         assigned:39, onTime:18, delayed:1, rate:64.3 },
-  { name:"Abdulaziz Al-Qahtani", assigned:37, onTime:17, delayed:0, rate:63.0 },
+  { name:"Faisal Al-Ghamdi",  assigned:12, onTime:9, delayed:0, rate:81.8 },
+  { name:"Haya Al-Otaibi",    assigned:12, onTime:8, delayed:1, rate:80.0 },
+  { name:"Yousef Al-Harbi",   assigned:13, onTime:8, delayed:1, rate:72.7 },
+  { name:"Mariam Al-Dosari",  assigned:13, onTime:7, delayed:1, rate:70.0 },
 ];
 
 function rateColor(rate){
@@ -350,22 +344,22 @@ const ALERTS = [
   {
     icon:`<path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>`,
     bg:"var(--red-bg)", color:"var(--red)",
-    text:`<b>29 assessments (3.9%)</b> are currently delayed.`,
+    text:`<b>3 assessments (6%)</b> are currently delayed.`,
   },
   {
     icon:`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`,
     bg:"var(--red-bg)", color:"var(--red-dark)",
-    text:`Most overdue: <b>Jazan Human Capital Cooperative Bank 59</b> \u2014 45 days late, still in progress.`,
+    text:`Most overdue: <b>Saudi Industrial Development Fund</b> \u2014 Offsite Review 3, 17 days late, still in progress.`,
   },
   {
     icon:`<path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/>`,
     bg:"var(--blue-bg)", color:"var(--blue)",
-    text:`Onsite examinations delay at nearly <b>2x</b> the rate of offsite reviews (5.5% vs 3.3%).`,
+    text:`All <b>3</b> currently delayed assessments are Offsite Reviews \u2014 no Onsite Examinations are behind schedule.`,
   },
   {
     icon:`<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>`,
     bg:"var(--amber-bg)", color:"var(--amber)",
-    text:`<b>Waleed Al-Anazi</b> has the lowest on-time rate (44%) \u2014 recommend a workload check.`,
+    text:`<b>Mariam Al-Dosari</b> has the lowest on-time rate (70%) of the 4 inspectors \u2014 worth a quick check-in.`,
   },
 ];
 function renderAlerts(){
